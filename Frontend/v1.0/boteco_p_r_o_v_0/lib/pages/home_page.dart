@@ -50,6 +50,9 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
+  String _capitalize(String s) =>
+    s.isNotEmpty ? s[0].toUpperCase() + s.substring(1) : s;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,7 +107,10 @@ class _HomePageState extends State<HomePage> {
     } else {
       greeting = 'Boa noite';
     }
-    
+    // pattern corrigido: o 'de' entre aspas simples é literal
+    final fmt = DateFormat("EEEE, d 'de' MMMM", 'pt_BR');
+    final dataText = _capitalize(fmt.format(now));
+
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(20),
@@ -134,7 +140,7 @@ class _HomePageState extends State<HomePage> {
           ),
           const SizedBox(height: 4),
           Text(
-            DateFormat('EEEE, d \"de\" MMMM', 'pt_BR').format(now),
+            dataText,
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Theme.of(context).colorScheme.onPrimary.withOpacity(0.8),
                 ),
