@@ -64,7 +64,7 @@ GO
    5. Inserir Pratos e Vincular com Ingredientes
    ------------------------------------------------ */
 -- 5.1. Pratos
-INSERT INTO Prato (nome, categoria_id, descriao, tempo_preparo, preco_base) VALUES
+INSERT INTO Prato (nome, categoria_id, descricao, tempo_preparo, preco_base) VALUES
     ('Bife à Portuguesa',       1, 'Bife de vaca com batatas fritas e ovo',  30, 12.00),
     ('Filet de Peixe Grelhado', 2, 'Filete de peixe grelhado com legumes',    25, 10.00),
     ('Esparguete à Carbonara',  3, 'Massa cozida com molho carbonara',      20,  8.00),
@@ -174,9 +174,9 @@ INSERT INTO MenuEspecial (nome, descricao, data_inicio, data_fim, preco_total) V
 INSERT INTO MenuEspecialPrato (menu_especial_id, prato_id, ordem) VALUES
     (1, 4, 1),  -- Omelete de Queijo
     (1, 2, 2),  -- Filet de Peixe Grelhado
-    (1, 1, 3),  -- Bife à Portuguesa
-    (1, 4, 4),  -- Reutilizar Omelete de Queijo como sobremesa (exemplo)
-    (1, 0, 5);  -- Café Expresso (produto_id = 0 indica item externo; ou inserir em PedidoItem como produto)
+    (1, 1, 3);  -- Bife à Portuguesa
+
+-- Sobremesa e café serão adicionados como produtos diretamente em PedidoItem
 
 -- Observação: Se quiser vincular Café Expresso como produto, pode-se criar um "prato" genérico ou alterar a lógica.
 -- Para este seed, usaremos produto (Café Expresso) diretamente no pedido de menu.
@@ -245,3 +245,4 @@ GO
    FROM Produto
    WHERE produto_id IN (1,2);
 ------------------------------------------------ */
+

@@ -203,16 +203,16 @@ Para cada entidade, são apresentados:
 | `prato_id`       | INT        | Identificador único (gerado por `sp_cadastrar_prato`)  |
 | `nome`           | VARCHAR    | Nome do prato (e.g., “Bife à Portuguesa”)             |
 | `categoria_id`   | INT        | FK para `Categoria`                                    |
-| `descriao`       | VARCHAR    | Descrição breve do prato                              |
+| `descricao`       | VARCHAR    | Descrição breve do prato                              |
 | `tempo_preparo`  | INT        | Tempo de preparo em minutos                            |
 | `preco_base`     | DECIMAL    | Custo-base considerado no cálculo do preço de venda    |
 
 **Objetos de API**:
 
 - **Criar Prato**:  
-  - `sp_cadastrar_prato(@nome, @categoria_id, @descriao, @tempo_preparo, @preco_base)` → retorna `prato_id`
+  - `sp_cadastrar_prato(@nome, @categoria_id, @descricao, @tempo_preparo, @preco_base)` → retorna `prato_id`
 - **Atualizar Prato**:  
-  - `sp_atualizar_prato(@prato_id, @nome, @categoria_id, @descriao, @tempo_preparo, @preco_base)`
+  - `sp_atualizar_prato(@prato_id, @nome, @categoria_id, @descricao, @tempo_preparo, @preco_base)`
 - **Excluir Prato**:  
   - `sp_excluir_prato(@prato_id)`
 - **Listar Pratos**:  
@@ -529,8 +529,8 @@ A tabela abaixo lista, de forma resumida, cada objeto exposto pela API, seu tipo
 | `sp_cadastrar_produto`              | Stored Procedure | **Params:** `@nome VARCHAR`, `@tipo VARCHAR`, `@custo_unitario DECIMAL`, `@preco_venda DECIMAL`, `@stock_atual INT`, `@stock_minimo INT`, `@stock_encomenda INT`, `@fornecedor_id INT` → **Retorna:** `produto_id INT` |
 | `sp_atualizar_produto`              | Stored Procedure | **Params:** `@produto_id INT`, `@nome VARCHAR = NULL`, `@tipo VARCHAR = NULL`, `@custo_unitario DECIMAL = NULL`, `@preco_venda DECIMAL = NULL`, `@stock_minimo INT = NULL`, `@stock_encomenda INT = NULL`, `@fornecedor_id INT = NULL` → **Retorna:** `status INT (0=sucesso)` |
 | `sp_excluir_produto`                | Stored Procedure | **Params:** `@produto_id INT` → **Retorna:** `status INT (0=sucesso)`                                                                                 |
-| `sp_cadastrar_prato`                | Stored Procedure | **Params:** `@nome VARCHAR`, `@categoria_id INT`, `@descriao VARCHAR = NULL`, `@tempo_preparo INT`, `@preco_base DECIMAL` → **Retorna:** `prato_id INT` |
-| `sp_atualizar_prato`                | Stored Procedure | **Params:** `@prato_id INT`, `@nome VARCHAR = NULL`, `@categoria_id INT = NULL`, `@descriao VARCHAR = NULL`, `@tempo_preparo INT = NULL`, `@preco_base DECIMAL = NULL` → **Retorna:** `status INT (0=sucesso)` |
+| `sp_cadastrar_prato`                | Stored Procedure | **Params:** `@nome VARCHAR`, `@categoria_id INT`, `@descricao VARCHAR = NULL`, `@tempo_preparo INT`, `@preco_base DECIMAL` → **Retorna:** `prato_id INT` |
+| `sp_atualizar_prato`                | Stored Procedure | **Params:** `@prato_id INT`, `@nome VARCHAR = NULL`, `@categoria_id INT = NULL`, `@descricao VARCHAR = NULL`, `@tempo_preparo INT = NULL`, `@preco_base DECIMAL = NULL` → **Retorna:** `status INT (0=sucesso)` |
 | `sp_excluir_prato`                  | Stored Procedure | **Params:** `@prato_id INT` → **Retorna:** `status INT (0=sucesso)`                                                                                  |
 | `sp_cadastrar_prato_ingrediente`    | Stored Procedure | **Params:** `@prato_id INT`, `@produto_id INT`, `@quantidade_necessaria DECIMAL` → **Retorna:** `status INT (0=sucesso)`                                   |
 | `sp_remover_prato_ingrediente`      | Stored Procedure | **Params:** `@prato_id INT`, `@produto_id INT` → **Retorna:** `status INT (0=sucesso)`                                                             |
@@ -610,3 +610,4 @@ Com base neste README, o desenvolvedor front-end poderá mapear cada entidade em
 - Quais parâmetros devem ser enviados para cada Stored Procedure para criar, atualizar ou excluir registros.  
 
 Dessa forma, garante-se fidelidade ao modelo de dados do Boteco Pro, evitando inconsistências e facilitando manutenções futuras.
+

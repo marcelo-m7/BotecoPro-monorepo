@@ -60,7 +60,7 @@
    - `prato_id`: INT, PK  
    - `nome`: VARCHAR(150)  
    - `categoria_id`: INT, FK → Categoria  
-   - `descriao`: VARCHAR(255)  
+   - `descricao`: VARCHAR(255)  
    - `tempo_preparo`: INT (minutos)  
    - `preco_base`: DECIMAL(10,2)  
 
@@ -243,3 +243,4 @@ Com esta modelagem, a implementação passa para a próxima fase: definir script
 3. As stored procedures auxiliares (`sp_abatimento_estoque_pedidoitem`, `sp_atualizar_stock_produto`) fazem parte de `06_create_triggers.sql` para manter a lógica de automação agrupada.
 4. Ajuste nomes de schemas (por exemplo, `dbo`) conforme convenção de seu ambiente.
 5. Após a execução, revise permissões: crie um usuário de API com apenas `SELECT` em Views e `EXECUTE` nas SPs/Functions.
+

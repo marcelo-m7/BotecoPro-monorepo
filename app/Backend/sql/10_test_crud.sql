@@ -253,7 +253,7 @@ DECLARE @prato_id INT;
 EXEC sp_cadastrar_prato
     @nome = 'Prato Teste',
     @categoria_id = 1,
-    @descriao = 'Descrição teste',
+    @descricao = 'Descrição teste',
     @tempo_preparo = 15,
     @preco_base = 5.00;
 SELECT @prato_id = SCOPE_IDENTITY();
@@ -592,3 +592,4 @@ GO
 -- =========================================================================
 -- FIM DOS TESTES CRUD
 -- =========================================================================
+

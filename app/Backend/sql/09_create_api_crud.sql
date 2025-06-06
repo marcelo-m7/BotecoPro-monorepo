@@ -515,12 +515,12 @@ GO
    ------------------------------------------------
    Insere novo prato no cardápio.
    Parâmetros:
-     @nome, @categoria_id, @descriao, @tempo_preparo, @preco_base.
+     @nome, @categoria_id, @descricao, @tempo_preparo, @preco_base.
 */
 CREATE PROCEDURE sp_cadastrar_prato
     @nome            VARCHAR(150),
     @categoria_id    INT,
-    @descriao        VARCHAR(255)   = NULL,
+    @descricao        VARCHAR(255)   = NULL,
     @tempo_preparo   INT,
     @preco_base      DECIMAL(10,2)
 AS
@@ -540,9 +540,9 @@ BEGIN
     END
 
     INSERT INTO Prato (
-        nome, categoria_id, descriao, tempo_preparo, preco_base
+        nome, categoria_id, descricao, tempo_preparo, preco_base
     ) VALUES (
-        @nome, @categoria_id, @descriao, @tempo_preparo, @preco_base
+        @nome, @categoria_id, @descricao, @tempo_preparo, @preco_base
     );
 
     DECLARE @novo_prato_id INT = SCOPE_IDENTITY();
@@ -555,13 +555,13 @@ GO
    ------------------------------------------------
    Atualiza dados de um prato existente.
    Parâmetros:
-     @prato_id, @nome, @categoria_id, @descriao, @tempo_preparo, @preco_base.
+     @prato_id, @nome, @categoria_id, @descricao, @tempo_preparo, @preco_base.
 */
 CREATE PROCEDURE sp_atualizar_prato
     @prato_id        INT,
     @nome            VARCHAR(150)   = NULL,
     @categoria_id    INT            = NULL,
-    @descriao        VARCHAR(255)   = NULL,
+    @descricao        VARCHAR(255)   = NULL,
     @tempo_preparo   INT            = NULL,
     @preco_base      DECIMAL(10,2)  = NULL
 AS
@@ -584,7 +584,7 @@ BEGIN
     SET
         nome           = COALESCE(@nome, nome),
         categoria_id   = COALESCE(@categoria_id, categoria_id),
-        descriao       = COALESCE(@descriao, descriao),
+        descricao       = COALESCE(@descricao, descricao),
         tempo_preparo  = COALESCE(@tempo_preparo, tempo_preparo),
         preco_base     = COALESCE(@preco_base, preco_base)
     WHERE prato_id = @prato_id;
@@ -1504,3 +1504,4 @@ GO
      geração automática de fatura ao finalizar pedido).
    - Para consumo pela API, o usuário deverá ter permissão EXECUTE em todas as SPs.
    ========================================================================= */
+

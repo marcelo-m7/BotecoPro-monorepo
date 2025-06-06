@@ -108,7 +108,7 @@ CREATE TABLE Prato (
     prato_id          INT           IDENTITY(1,1) PRIMARY KEY,
     nome              VARCHAR(150)  NOT NULL,
     categoria_id      INT           NOT NULL,
-    descriao          VARCHAR(255)  NULL,
+    descricao          VARCHAR(255)  NULL,
     tempo_preparo     INT           NOT NULL,    -- em minutos
     preco_base        DECIMAL(10,2) NOT NULL,
     CONSTRAINT FK_Prato_Categoria FOREIGN KEY (categoria_id)

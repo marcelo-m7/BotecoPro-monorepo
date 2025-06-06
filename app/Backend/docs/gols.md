@@ -199,7 +199,7 @@ CREATE TABLE Prato (
     prato_id          INT           IDENTITY(1,1) PRIMARY KEY,
     nome              VARCHAR(150)  NOT NULL,
     categoria_id      INT           NOT NULL,
-    descriao          VARCHAR(255)  NULL,
+    descricao          VARCHAR(255)  NULL,
     tempo_preparo     INT           NOT NULL,    -- em minutos
     preco_base        DECIMAL(10,2) NOT NULL,    -- pode ser calculado ou definido
     CONSTRAINT FK_Prato_Categoria FOREIGN KEY (categoria_id)
@@ -1638,3 +1638,4 @@ Este plano de desenvolvimento organiza, em etapas claras, a criação do banco d
 * **Plano de Implementação**: passo a passo desde a criação das tabelas até testes finais.
 
 Seguindo este guia, a equipe poderá implementar o sistema de forma padronizada, garantindo que a API tenha acesso seguro e performático aos dados necessários para os casos de uso dos funcionários no dia a dia. Fica aberto espaço para ajustes específicos conforme necessidades futuros (e.g., auditoria, relatórios personalizados, futuras integrações).
+

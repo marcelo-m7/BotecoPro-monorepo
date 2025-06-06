@@ -50,7 +50,3 @@ JOIN dbo.Produto p
     ON mv.produto_id = p.produto_id;
 GO
 
--- Índice não clusterizado sobre nome_produto
-CREATE NONCLUSTERED INDEX idx_mv_estoque_nome_produto
-    ON view_estoque_utilizado_detalhado (nome_produto);
-GO

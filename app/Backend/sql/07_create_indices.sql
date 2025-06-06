@@ -72,3 +72,4 @@ GO
 CREATE NONCLUSTERED INDEX idx_pedidoitem_produto
     ON PedidoItem (produto_id);
 GO
+
