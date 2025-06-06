@@ -27,3 +27,13 @@ O frontend consome a API para obter ou persistir dados. Enquanto a implementaç�
 - `frontend/AGENTS.md` possui instruções para os agentes que trabalharão no frontend.
 
 Consulte cada pasta para informações específicas de instalação e execução.
+
+## Docker Compose
+
+Para executar todo o projeto via contêineres utilize:
+
+```bash
+docker compose up
+```
+
+A API lê a string de conexão do SQL Server a partir da variável `BOTECOPRO_DB_DSN`. Defina-a em um arquivo `.env` na raiz ou exporte antes de iniciar os serviços. O frontend pode receber `VITE_API_BASE_URL` e `VITE_API_TOKEN` para apontar para o backend desejado. Consulte os arquivos `.env.example` em cada pasta para valores de exemplo.
