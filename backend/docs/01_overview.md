@@ -65,8 +65,8 @@ Boteco Pro busca centralizar todas essas operações em um único banco de dados
 
 ## 4. Organização do Repositório
 
-- **docs/**: toda a documentação sobre modelagem, diagramas e descrição dos objetos de consulta (Views, Functions, SPs).  
-- **sql/**: scripts SQL executáveis, organizados em etapas lógicas (tabelas, objects de consumo, objetos de manutenção automática).  
-- **README.md**: visão geral do projeto e orientações iniciais.  
+- **docs/**: toda a documentação sobre modelagem, diagramas e descrição dos objetos de consulta (Views, Functions, SPs).
+- **src/db/sql/**: scripts SQL executáveis, organizados em etapas lógicas (tabelas, objetos de consumo e rotinas de manutenção).
+- **README.md**: visão geral do projeto e orientações iniciais.
 
 Com esta estrutura, desenvolvedores e DBAs podem entender rapidamente a arquitetura, modelagem e os objetos de consumo disponíveis pela API.

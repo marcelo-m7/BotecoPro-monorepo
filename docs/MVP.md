@@ -61,7 +61,7 @@ Esta pasta contém instruções para agentes implementarem um MVP (Minimum Viabl
 
 ## 5. Referências e Próximos Passos
 
-- A modelagem detalhada e objetos de API estão em `../Backend/docs`.
+- A modelagem detalhada e objetos de API estão em `../backend/docs`.
 - Assim que o backend estiver disponível, adaptar `DataService` para consumir os endpoints correspondentes às SPs e Views descritas em `05_api_crud.md`.
 - Expandir funcionalidades para cadastro e relatórios conforme evoluir o projeto.
 
