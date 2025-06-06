@@ -1,24 +1,38 @@
 # Boteco Pro API
 
-Este diretório reunirá a implementação da API em Python.
+Esta pasta contém a implementação da API em **FastAPI** que serve de ponte entre o
+banco de dados MSSQL e o frontend React.
 
-## Dependências sugeridas
-
-- [FastAPI](https://fastapi.tiangolo.com/) e `uvicorn` para o servidor HTTP.
-- `pyodbc` para conexão ao **Microsoft SQL Server**.
-- `python-dotenv` (opcional) para carregar variáveis de ambiente em desenvolvimento.
-
-Crie um arquivo `requirements.txt` com estas bibliotecas para facilitar a instalação.
-
-## Executando em desenvolvimento
+## Instalação
 
 ```bash
 pip install -r requirements.txt
+```
+
+A API depende da variável de ambiente `BOTECOPRO_DB_DSN` com a string de conexão
+ODBC para o SQL Server.
+
+## Execução em desenvolvimento
+
+```bash
 uvicorn app:app --reload
 ```
 
-O módulo de conexão deverá ler a string ODBC da variável `BOTECOPRO_DB_DSN`. Certifique-se de que o banco esteja acessível em `localhost`.
+## Funcionamento
 
-## Objetivo das Rotas
+Ao iniciar, a aplicação consulta o banco para listar todas as **Views** e cria
+automaticamente rotas de leitura baseadas no nome de cada view. Por exemplo,
+`view_mesas_disponiveis` torna-se:
 
-As rotas da API deverão executar as Views e Stored Procedures descritas em `../../docs/05_api_crud.md`. Cada operação deverá retornar JSON para consumo pelo frontend React.
+```
+GET /mesas/disponiveis
+```
+
+Também há um endpoint genérico para execução de Stored Procedures:
+
+```
+POST /exec/{nome_da_procedure}
+```
+
+O corpo da requisição deve conter um JSON com os parâmetros necessários. O
+resultado retornado pelo banco é entregue em JSON.
