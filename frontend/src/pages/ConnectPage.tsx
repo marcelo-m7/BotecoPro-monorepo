@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSync } from '../hooks/useSync';
 
 export default function ConnectPage() {
-  const [url, setUrl] = useState('');
+  const [url, setUrl] = useState<string>(import.meta.env.VITE_API_BASE_URL || '');
   const { connect } = useSync();
   const navigate = useNavigate();
 

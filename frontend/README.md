@@ -11,6 +11,12 @@ npm run dev
 
 Open `http://localhost:5173` in your browser.
 
+## Environment Variables
+
+Copy `.env.example` to `.env` if you want to preconfigure the API settings. The
+`VITE_API_TOKEN` variable is used as the `Authorization` header for requests and
+`VITE_API_BASE_URL` can define the default backend URL.
+
 ## Agents Guidance
 
 See `Agents.md` for instructions on how to contribute and the project goals.
