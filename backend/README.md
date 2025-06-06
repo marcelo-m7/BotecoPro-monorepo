@@ -37,6 +37,11 @@ backend/
 - **src/test/**
   - Scripts `pytest` que validam a execução dos scripts SQL. Defina a variável de ambiente `BOTECOPRO_DB_DSN` para apontar para a instância de testes.
 
+### Variáveis de Ambiente
+
+Copie o arquivo `.env.example` para `.env` e ajuste a string de conexão `BOTECOPRO_DB_DSN` conforme sua instalação do SQL Server.
+
+
 ### Banco de Dados
 
 Os scripts SQL foram preparados para Microsoft SQL Server e podem ser executados no **SQL Server Management Studio** localmente. A API deverá acessar este banco através de `localhost`. Em um próximo estágio poderemos publicar o banco na Google Cloud para acesso remoto.

@@ -19,7 +19,7 @@ Copy `.env.example` to `.env` if you want to preconfigure the API settings. The
 
 ## Agents Guidance
 
-See `Agents.md` for instructions on how to contribute and the project goals.
+See `AGENTS.md` for instructions on how to contribute and the project goals.
 
 ## Switching Between Mock and API Data
 

@@ -18,7 +18,7 @@ export interface Prato {
   prato_id: number;
   nome: string;
   categoria_id: number;
-  descriao?: string;
+  descricao?: string;
   tempo_preparo: number;
   preco_base: number;
 }
