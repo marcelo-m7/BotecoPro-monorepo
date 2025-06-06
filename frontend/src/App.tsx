@@ -5,6 +5,7 @@ import PedidosPage from './pages/PedidosPage';
 import PratosPage from './pages/PratosPage';
 import EstoquePage from './pages/EstoquePage';
 import ConnectPage from './pages/ConnectPage';
+import GestaoPage from './pages/GestaoPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/pedidos" element={<PedidosPage />} />
         <Route path="/pratos" element={<PratosPage />} />
         <Route path="/estoque" element={<EstoquePage />} />
+        <Route path="/gestao" element={<GestaoPage />} />
       </Routes>
     </BrowserRouter>
   );

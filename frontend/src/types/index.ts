@@ -29,3 +29,11 @@ export interface Ingrediente {
   stock_atual: number;
   stock_minimo: number;
 }
+
+export interface Funcionario {
+  funcionario_id: number;
+  nome: string;
+  cargo: string;
+  carreira_id: number;
+  data_admissao: string;
+}

@@ -1,4 +1,4 @@
-import type { Mesa, Pedido, Prato, Ingrediente } from '../types';
+import type { Mesa, Pedido, Prato, Ingrediente, Funcionario } from '../types';
 
 const LOCAL_STORAGE_KEY = 'botecoProData';
 let useApi = false;
@@ -40,6 +40,14 @@ export async function getEstoque(): Promise<Ingrediente[]> {
   return await res.json();
 }
 
+export async function getFuncionarios(): Promise<Funcionario[]> {
+  if (!useApi) {
+    return loadMocks<Funcionario>('funcionarios.json');
+  }
+  const res = await fetch(`${apiBaseUrl}/funcionarios`);
+  return await res.json();
+}
+
 export function saveLocal<T>(key: string, data: T[]): void {
   localStorage.setItem(`${LOCAL_STORAGE_KEY}-${key}`, JSON.stringify(data));
 }
@@ -60,6 +68,7 @@ export const DataService = {
   getPedidos,
   getPratos,
   getEstoque,
+  getFuncionarios,
   saveLocal,
   loadLocal,
   syncWithApi

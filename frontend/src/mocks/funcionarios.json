@@ -1,0 +1,5 @@
+[
+  {"funcionario_id": 1, "nome": "João Silva", "cargo": "Garçom", "carreira_id": 1, "data_admissao": "2022-01-10"},
+  {"funcionario_id": 2, "nome": "Maria Souza", "cargo": "Cozinheira", "carreira_id": 2, "data_admissao": "2021-11-05"},
+  {"funcionario_id": 3, "nome": "Pedro Santos", "cargo": "Gerente", "carreira_id": 3, "data_admissao": "2020-05-20"}
+]
