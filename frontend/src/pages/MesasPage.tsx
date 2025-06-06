@@ -17,7 +17,6 @@ export default function MesasPage() {
           <tr>
             <th>#</th>
             <th>Capacidade</th>
-            <th>Status</th>
           </tr>
         </thead>
         <tbody>
@@ -25,7 +24,6 @@ export default function MesasPage() {
             <tr key={mesa.mesa_id}>
               <td>{mesa.numero}</td>
               <td>{mesa.capacidade}</td>
-              <td>{mesa.status}</td>
             </tr>
           ))}
         </tbody>

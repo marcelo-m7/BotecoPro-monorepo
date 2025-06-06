@@ -11,23 +11,19 @@ export default function PratosPage() {
 
   return (
     <div>
-      <h1>Menu / Pratos</h1>
+      <h1>Pratos Populares</h1>
       <table>
         <thead>
           <tr>
             <th>Prato</th>
-            <th>Categoria ID</th>
-            <th>Tempo (min)</th>
-            <th>Preço Base</th>
+            <th>Total Vendas</th>
           </tr>
         </thead>
         <tbody>
           {pratos.map(p => (
             <tr key={p.prato_id}>
-              <td>{p.nome}</td>
-              <td>{p.categoria_id}</td>
-              <td>{p.tempo_preparo}</td>
-              <td>{p.preco_base.toFixed(2)}</td>
+              <td>{p.nome_prato}</td>
+              <td>{p.total_vendas}</td>
             </tr>
           ))}
         </tbody>
