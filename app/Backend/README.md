@@ -30,6 +30,10 @@ Backend/
 ├── 05\_create\_stored\_procedures.sql
 ├── 06\_create\_triggers.sql
 └── 07\_create\_indices.sql
+└── test/
+    ├── README.md
+    ├── requirements.txt
+    └── test_schema_creation.py
 ```
 
 - **docs/**  
@@ -42,6 +46,8 @@ Backend/
   - `02_create_views.sql`: scripts `CREATE VIEW` para consultas.  
   - `03_create_materialized_views.sql`: Indexed Views e materialized views.  
   - `04_create_functions.sql`: funções (scalar e table-valued).  
-  - `05_create_stored_procedures.sql`: stored procedures para leitura parametrizada.  
-  - `06_create_triggers.sql`: triggers para abatimento de estoque, geração de encomendas e faturas.  
+  - `05_create_stored_procedures.sql`: stored procedures para leitura parametrizada.
+  - `06_create_triggers.sql`: triggers para abatimento de estoque, geração de encomendas e faturas.
   - `07_create_indices.sql`: índices adicionais (individual ou em materialized views).
+- **test/**
+  - scripts `pytest` para validar a criação de tabelas e objetos a partir dos scripts SQL.
