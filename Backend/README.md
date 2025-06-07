@@ -106,7 +106,7 @@ O sistema desenvolvido cobre todas as funcionalidades propostas no enunciado da 
 ---
 
 ## 6. Documentação Complementar
-- [Relatório TP1](TP1_Relatório_a79433_Marcelo Santos.md)
+- [Relatório TP1](docs/Relatório_TP1.md)
 - [Instruções para configuração do banco de dados](docs/INSTRUCOES_DB.md)
 - [Relatório técnico detalhado](docs/BACKEND.md)
 - [Relatório da estrutura do banco](docs/ESTUTURA_DB.md)
