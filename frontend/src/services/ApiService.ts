@@ -6,14 +6,14 @@ export function setBaseUrl(url: string) {
 }
 
 async function request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
-  const res = await fetch(`${apiBaseUrl}${endpoint}`, {
-    headers: {
-      'Authorization': `Bearer ${token}`,
-      'Content-Type': 'application/json',
-      ...options.headers
-    },
-    ...options
-  });
+  const headers: HeadersInit = { ...options.headers };
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+  }
+  if (options.body) {
+    headers['Content-Type'] = 'application/json';
+  }
+  const res = await fetch(`${apiBaseUrl}${endpoint}`, { headers, ...options });
   if (!res.ok) {
     throw new Error(`API error ${res.status}`);
   }

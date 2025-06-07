@@ -12,21 +12,21 @@ export async function getMesas(): Promise<Mesa[]> {
   if (!useApi) {
     return loadMocks<Mesa>('mesas.json');
   }
-  return ApiService.get<Mesa[]>('/mesas_disponiveis');
+  return ApiService.get<Mesa[]>('/mesas/disponiveis');
 }
 
 export async function getPedidos(): Promise<Pedido[]> {
   if (!useApi) {
     return loadMocks<Pedido>('pedidos.json');
   }
-  return ApiService.get<Pedido[]>('/pedidos/em_andamento');
+  return ApiService.get<Pedido[]>('/pedidos/em/andamento');
 }
 
 export async function getPratos(): Promise<Prato[]> {
   if (!useApi) {
     return loadMocks<Prato>('pratos.json');
   }
-  return ApiService.get<Prato[]>('/pratos');
+  return ApiService.get<Prato[]>('/pratos/populares');
 }
 
 export async function getEstoque(): Promise<Ingrediente[]> {
@@ -40,7 +40,7 @@ export async function getFuncionarios(): Promise<Funcionario[]> {
   if (!useApi) {
     return loadMocks<Funcionario>('funcionarios.json');
   }
-  return ApiService.get<Funcionario[]>('/funcionarios');
+  return ApiService.get<Funcionario[]>('/horas/funcionario');
 }
 
 export function saveLocal<T>(key: string, data: T[]): void {

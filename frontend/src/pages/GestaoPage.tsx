@@ -11,21 +11,21 @@ export default function GestaoPage() {
 
   return (
     <div>
-      <h1>Gestão - Funcionários</h1>
+      <h1>Horas por Funcionário</h1>
       <table>
         <thead>
           <tr>
             <th>Nome</th>
-            <th>Cargo</th>
-            <th>Admissão</th>
+            <th>Horas Normais</th>
+            <th>Horas Extra</th>
           </tr>
         </thead>
         <tbody>
           {funcionarios.map(f => (
             <tr key={f.funcionario_id}>
-              <td>{f.nome}</td>
-              <td>{f.cargo}</td>
-              <td>{new Date(f.data_admissao).toLocaleDateString()}</td>
+              <td>{f.nome_funcionario}</td>
+              <td>{f.total_horas_normais}</td>
+              <td>{f.total_horas_extra}</td>
             </tr>
           ))}
         </tbody>
