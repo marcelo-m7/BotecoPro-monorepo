@@ -85,7 +85,13 @@ O sistema desenvolvido cobre todas as funcionalidades propostas no enunciado da 
 
 ---
 
-## 6. Referências
+## 6. Documentação Complementar
+
+- [Instruções para configuração do banco de dados](docs/INSTRUCOES_BANCO.md)
+- [Relatório técnico detalhado](docs/RELATORIO_TECNICO.md)
+
+---
+## 7. Referências
 - Enunciado oficial da UC de Base de Dados II
 - Documentação oficial Microsoft SQL Server
 - W3Schools SQL Reference
