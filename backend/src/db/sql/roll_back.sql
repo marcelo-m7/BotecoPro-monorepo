@@ -1,1 +1,1 @@
-DROP view dbo.iv_estoque_saida_agregado
+DROP DATABASE botecopro_db_db;

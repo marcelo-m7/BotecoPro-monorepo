@@ -18,4 +18,10 @@ Se a variável não estiver configurada, os testes serão automaticamente ignora
    pytest -q
    ```
 
+## Para uso de SQL Server no Cloud SQL (https://cloud.google.com/sdk/docs/install?hl=pt-br):
 
+gcloud init
+gcloud auth application-default login
+cloud-sql-proxy boteco-pro:us-central1:botecopro --port=1433
+
+Server Passa a ser 127.0.0.1:1433
