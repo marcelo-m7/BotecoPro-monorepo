@@ -4,6 +4,90 @@
 
 ---
 
+
+
+## 📦 Aviso importante antes de se perder (Português 🇧🇷) 
+
+> **Este repositório é basicamente uma acervo dos repositórios sobreviventes do meu hiperfoco do Boteco PRO (rsrs)… cheio de rascunhos, ideias e decisões que mudaram no caminho.** 
+
+Aqui mora o **arquivo histórico das propostas de execução do Boteco PRO**.
+Tem ideia boa, ideia exagerada, ideia que parecia genial às 3h da manhã e até umas arquiteturas que hoje eu olho e penso: *“ok, ainda bem que evoluiu”* 😅
+
+Este repo existe pra **contar a história do projeto**, não pra representar o estado atual em produção.
+
+⚠️ **Resumo honesto:**
+👉 se você está procurando **o Boteco PRO rodando de verdade**, este **não é** o lugar certo.
+👉 se você quer entender **como o projeto pensou, testou, errou e amadureceu**, então senta que a história é boa.
+
+### 🍻 Onde o Boteco PRO está vivo hoje
+
+O projeto cresceu, ganhou corpo e hoje está dividido assim:
+
+* **Website atual (institucional + produto):**
+  [https://boteco.pt](https://boteco.pt)
+  Código: [https://github.com/marcelo-m7/BotecoPRO-website](https://github.com/marcelo-m7/BotecoPRO-website)
+
+* **App atual (o Boteco PRO de verdade):**
+  [https://app.boteco.pt](https://app.boteco.pt)
+  Código: [https://github.com/marcelo-m7/BotecoPro-app](https://github.com/marcelo-m7/BotecoPro-app)
+
+* **Proposta original do monorepo (a ideia raiz):**
+  [https://github.com/marcelo-m7/BotecoPro-monorepo/tree/monorepo-base](https://github.com/marcelo-m7/BotecoPro-monorepo/tree/monorepo-base)
+
+💡 **Dica de ouro:** explore também as **outras branches deste repositório**.
+Elas mostram diferentes tentativas de arquitetura, refactors ambiciosos e caminhos que quase viraram realidade.
+
+Este repositório é tipo aquele caderno antigo de engenharia:
+bagunçado às vezes, mas cheio de aprendizado.
+
+
+[Marcelo Santos](https://github.com/marcelo-m7)
+
+[Monynha Softwares](https://monynha.com) 🐒💻
+
+---
+
+## 📦 Read this before you get excited (English 🇺🇸)
+
+> **This repository is basically a survivors santuary for my repositories… full of drafts, experiments and “this looked like a good idea at the time” moments.** 
+
+This is the **historical archive of Boteco PRO execution proposals** and hyperfocus on Boteco PRO idea (rsrs). 
+You’ll find early concepts, ambitious monorepo ideas, architectural experiments and a few decisions that made perfect sense… until they didn’t 😄
+
+This repo exists to **tell the story of the project**, not to represent its current production state.
+
+⚠️ **Honest summary:**
+👉 if you’re looking for **the real, running Boteco PRO**, this is **not** the right place.
+👉 if you want to understand **how the project evolved, pivoted and matured**, welcome aboard.
+
+### 🍻 Where Boteco PRO actually lives today
+
+The project evolved and is currently active here:
+
+* **Current website:**
+  [https://boteco.pt](https://boteco.pt)
+  Source code: [https://github.com/marcelo-m7/BotecoPRO-website](https://github.com/marcelo-m7/BotecoPRO-website)
+
+* **Current application (the real deal):**
+  [https://app.boteco.pt](https://app.boteco.pt)
+  Source code: [https://github.com/marcelo-m7/BotecoPro-app](https://github.com/marcelo-m7/BotecoPro-app)
+
+* **Original monorepo proposal (the root idea):**
+  [https://github.com/marcelo-m7/BotecoPro-monorepo/tree/monorepo-base](https://github.com/marcelo-m7/BotecoPro-monorepo/tree/monorepo-base)
+
+💡 **Pro tip:** check out the **other branches in this repository**.
+They showcase alternative architectures, ambitious refactors and paths that almost became production.
+
+Think of this repo as an old engineering notebook:
+not always pretty, but packed with lessons.
+
+
+[Marcelo Santos](https://github.com/marcelo-m7)
+
+[Monynha Softwares](https://monynha.com) 🐒💻
+
+---
+
 ## ✨ What is Boteco PRO?
 
 Boteco PRO is a **cross-platform management system for small Brazilian bars (“botecos”)**.
