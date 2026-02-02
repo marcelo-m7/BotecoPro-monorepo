@@ -9,10 +9,7 @@
 Boteco PRO is a **cross-platform management system for small Brazilian bars (“botecos”)**.
 It helps owners keep tables, orders, stock, recipes and in-house production under control – whether the app is installed on Android, iOS or opened as a PWA in the browser.
 
-> **Author:** Marcelo Santos – [a79433@ualg.pt](mailto:a79433@ualg.pt)
-> **Course:** *LESTI* – Universidade do Algarve
-> **Semester:** 2024/2025 (Trabalho Final)
-
+> **Author:** [Marcelo Santos](https://github.com/marcelo-m7)
 ---
 
 ## 📦 Current Feature Set
